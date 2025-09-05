@@ -1,0 +1,17 @@
+    /* small helpers */
+    .cell:focus {
+        outline: 3px solid rgba(99, 102, 241, .18);
+    }
+
+    .grab {
+        cursor: grab
+    }
+
+    .no-select {
+        user-select: none
+    }
+
+    table td,
+    table th {
+        min-width: 160px
+    }

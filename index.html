@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Club Sheet — 3-Month Plan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+  <div class="max-w-7xl mx-auto p-6">
+    <header class="flex items-center gap-4 mb-6">
+       <img src="image.png" alt="logo" width="10%">      
+       <div>
+        <h1 class="text-2xl font-extrabold">Club Sheet — 3-Month Plan</h1>
+        <p class="text-sm text-slate-500">A lightweight Google-Sheet-like platform. Edit cells, add/remove rows, export CSV/JSON. Auto-saves locally.</p>
+      </div>
+      <div class="ml-auto flex gap-2">
+        <button id="addRow" class="px-3 py-1 rounded-lg bg-indigo-600 text-white shadow">+ Add row</button>
+        <button id="exportCSV" class="px-3 py-1 rounded-lg bg-emerald-600 text-white">Export CSV</button>
+        <button id="exportJSON" class="px-3 py-1 rounded-lg bg-amber-500 text-white">Export JSON</button>
+        <input id="imp" type="file" accept="application/json" class="hidden" />
+        <button id="importBtn" class="px-3 py-1 rounded-lg bg-white border">Import</button>
+      </div>
+    </header>
+
+    <main class="bg-white rounded-2xl shadow p-4">
+      <div class="overflow-x-auto">
+        <table id="sheet" class="min-w-[900px] w-full table-auto border-collapse">
+          <thead>
+            <tr class="text-left bg-slate-100">
+              <th class="p-3 border">#</th>
+              <th class="p-3 border">Month</th>
+              <th class="p-3 border">Activities & Workshops</th>
+              <th class="p-3 border">Meetings</th>
+              <th class="p-3 border">Recruitment Methods</th>
+              <th class="p-3 border">Progress</th>
+              <th class="p-3 border">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="mt-4 text-sm text-slate-500">
+        Tip: Double-click a cell to edit. Changes are saved automatically. Use export to download CSV/JSON.
+      </div>
+    </main>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
